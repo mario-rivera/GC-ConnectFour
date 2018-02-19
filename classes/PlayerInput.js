@@ -1,9 +1,5 @@
 const readline = require('readline');
-
-// rl.question('What do you think of Node.js? ', (answer) => {
-// 
-//   rl.close();
-// });
+const EOL = require('os').EOL;
 
 module.exports = class PlayerInput{
     
@@ -12,6 +8,18 @@ module.exports = class PlayerInput{
         this.rl = readline.createInterface({
           input: process.stdin,
           output: process.stdout
+        });
+    }
+    
+    prompt(text){
+        
+        return new Promise((resolve, reject) => {
+            
+            this.rl.question(text + EOL, (answer) => {
+                
+                resolve(answer);
+                this.rl.pause();
+            });
         });
     }
 }

@@ -1,13 +1,12 @@
 module.exports = class VeryBasicRenderer{
     
-    constructor(board){
+    constructor(){
         
-        this.board = board;
     }
     
-    render(){
+    render(board){
         
-        this.board.rows.forEach((row) => {
+        board.rows.forEach((row) => {
             
             console.log(row);
         });

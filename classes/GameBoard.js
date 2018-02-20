@@ -34,7 +34,7 @@ module.exports = class GameBoard{
             
             this.rows[emptyRowIndex][colNumber-1] = playerId;
             
-            return resolve( this.checkForWin() );
+            return resolve( true );
         });
     }
     

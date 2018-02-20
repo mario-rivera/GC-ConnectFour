@@ -5,6 +5,10 @@ module.exports = class PlayerInput{
     
     constructor(){
         
+    }
+    
+    init(){
+        
         this.rl = readline.createInterface({
           input: process.stdin,
           output: process.stdout

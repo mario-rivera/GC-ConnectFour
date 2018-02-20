@@ -1,3 +1,5 @@
+const EOL = require('os').EOL;
+
 module.exports = class VeryBasicRenderer{
     
     constructor(){
@@ -6,9 +8,13 @@ module.exports = class VeryBasicRenderer{
     
     render(board){
         
+        console.log('=====================' + EOL);
         board.rows.forEach((row) => {
             
             console.log(row);
         });
+        
+        console.log(EOL);
+        console.log('=====================' + EOL);
     }
 }
